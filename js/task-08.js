@@ -7,9 +7,10 @@ form.addEventListener("submit", (e) => {
     elements: { email, password },
   } = e.currentTarget;
 
-  if (email.value === "" || password.value === "")
+  if (email.value === "" || password.value === "") {
     alert("Ви не заповнили усі поля");
-
-  console.log(`Email: ${email.value} || Password: ${password.value}`);
-  form.reset();
+  } else {
+    console.log(`Email: ${email.value} || Password: ${password.value}`);
+    form.reset();
+  }
 });
